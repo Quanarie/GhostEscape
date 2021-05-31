@@ -5,11 +5,12 @@ using UnityEngine;
 public class GhostMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private Joystick joystick;
 
     private void Update()
     {
-        float xAxis = Input.GetAxis("Horizontal");
-        float yAxis = Input.GetAxis("Vertical");
+        float xAxis = joystick.Horizontal;
+        float yAxis = joystick.Vertical;
 
         Vector3 pos = transform.position;
         pos.x += xAxis * Time.deltaTime * speed;

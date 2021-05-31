@@ -6,11 +6,8 @@ public class GhostAttack : MonoBehaviour
 {
     [SerializeField] private GameObject projectile;
 
-    private void Update()
+    public void OnAttackButtonDown()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(projectile, transform.position, transform.rotation);
-        }
+        Instantiate(projectile, transform.position, transform.rotation);
     }
 }
