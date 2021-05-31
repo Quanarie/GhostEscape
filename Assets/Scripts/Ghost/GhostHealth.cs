@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GhostHealth : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class GhostHealth : MonoBehaviour
 
     private void DestroyIfNotAlive()
     {
-        if (maxHealth <= 0) Destroy(gameObject);
+        if (maxHealth <= 0)
+        {
+            Destroy(gameObject);
+            SceneManager.LoadScene(0);
+        }
     }
 }

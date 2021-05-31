@@ -216,11 +216,12 @@ GameObject:
   m_Component:
   - component: {fileID: 868918711}
   - component: {fileID: 868918710}
+  - component: {fileID: 868918717}
+  - component: {fileID: 868918716}
   - component: {fileID: 868918712}
   - component: {fileID: 868918713}
   - component: {fileID: 868918715}
-  - component: {fileID: 868918716}
-  - component: {fileID: 868918717}
+  - component: {fileID: 868918714}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -319,6 +320,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 7259808295486189251, guid: 560a20c68c27044479697d23437a749d, type: 3}
+--- !u!114 &868918714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868918709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1a1834ae65dac4f9168423a1df272e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportDistance: 5
 --- !u!114 &868918715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,7 +471,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662933616}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66f6da073c9b84f44920d609c4d105a3, type: 3}
   m_Name: 

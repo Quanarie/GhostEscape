@@ -12,6 +12,7 @@ public class ChunksSpawner : MonoBehaviour
     {
         GameObject startChunk = Instantiate(chunks[Random.Range(0, chunks.Length)], transform.position, transform.rotation, transform);
         spawnedChunks.Add(startChunk);
+        startChunk.SetActive(false);
     }
 
     private void Update()
