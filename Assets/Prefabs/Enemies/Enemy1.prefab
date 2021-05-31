@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verticalSpeed: 5
-  gorizontalSpeed: 1
+  gorizontalSpeed: 0.5
   target: {fileID: 0}
 --- !u!114 &-5706169739218756856
 MonoBehaviour:
