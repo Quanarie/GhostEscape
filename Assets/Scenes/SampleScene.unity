@@ -368,7 +368,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1662933616
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +432,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 868918711}
+    - target: {fileID: -5706169739218756856, guid: aced109f04112274eb3a01a99c804915, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 868918709}
     - target: {fileID: 124083608241554325, guid: aced109f04112274eb3a01a99c804915, type: 3}
       propertyPath: m_Name
       value: Enemy1
