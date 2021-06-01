@@ -1165,6 +1165,7 @@ MonoBehaviour:
   maxX: 5.5
   minTimeBeetweenAttack: 3
   maxTimeBeetweenAttack: 7
+  attackAnimation: {fileID: 7400000, guid: 9314ccc74b9159740a87da2d2610800c, type: 2}
 --- !u!1 &1493497761
 GameObject:
   m_ObjectHideFlags: 0
