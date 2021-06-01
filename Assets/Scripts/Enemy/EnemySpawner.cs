@@ -5,11 +5,13 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] enemies;
-    [SerializeField] private float timeBetweenSpawn;
+    [SerializeField] private float minTimeBeetweenSpawn;
+    [SerializeField] private float maxTimeBeetweenSpawn;
     [SerializeField] private float minX;
     [SerializeField] private float maxX;
     [SerializeField] private GameObject target;
 
+    private float timeBetweenSpawn;
     private float timeFromPreviousSpawn;
     private List<GameObject> spawnedEnemies = new List<GameObject>();
 
@@ -26,6 +28,7 @@ public class EnemySpawner : MonoBehaviour
             spawnedEnemies.Add(enemy);
 
             timeFromPreviousSpawn = 0f;
+            timeBetweenSpawn = Random.Range(minTimeBeetweenSpawn, maxTimeBeetweenSpawn);
         }
         else
         {
