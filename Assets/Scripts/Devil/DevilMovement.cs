@@ -11,7 +11,7 @@ public class DevilMovement : MonoBehaviour
     [SerializeField] private float maxTimeBeetweenAttack;
     [SerializeField] private AnimationClip attackAnimation;
 
-    private float timeBetweenAttack;
+    private float timeBetweenAttack = 5f;
     private float timeFromPreviousAttack;
 
     void Update()
