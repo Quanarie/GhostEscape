@@ -2117,6 +2117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportDistance: 5
+  clip: {fileID: 8300000, guid: 8218fc8c818bdd244a7cdba1c9198a5c, type: 3}
 --- !u!114 &868918715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2928,8 +2929,8 @@ MonoBehaviour:
   minX: -4.5
   maxX: 4.5
   minSpawnTimeThrowEntireGame: 3
-  minTimeBeetweenAttack: 3
-  maxTimeBeetweenAttack: 3
+  minTimeBeetweenAttack: 8
+  maxTimeBeetweenAttack: 12
   attackAnimation: {fileID: 7400000, guid: d6c340cfe312b7c4cba2c455bbb6f90e, type: 2}
 --- !u!82 &1492155671
 AudioSource:

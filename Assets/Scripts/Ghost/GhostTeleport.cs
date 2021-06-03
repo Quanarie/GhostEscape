@@ -5,6 +5,7 @@ using UnityEngine;
 public class GhostTeleport : MonoBehaviour
 {
     [SerializeField] private float teleportDistance;
+    [SerializeField] private AudioClip clip;
 
     private void Start()
     {
@@ -16,5 +17,7 @@ public class GhostTeleport : MonoBehaviour
         Vector3 pos = transform.position;
         pos.y += teleportDistance;
         transform.position = pos;
+
+        GetComponent<AudioSource>().PlayOneShot(clip);
     }
 }
