@@ -13,6 +13,10 @@ public class TriggerAreaAttack : MonoBehaviour
         {
             collision.GetComponent<GhostHealth>().TakeDamage(damage);
             Instantiate(effect, collision.transform.position, collision.transform.rotation);
+            if (GetComponent<AudioSource>() != null)
+            {
+                GetComponent<AudioSource>().Play();
+            }
         }
     }
 }

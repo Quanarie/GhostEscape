@@ -14,5 +14,6 @@ public class GhostAttack : MonoBehaviour
     public void OnAttack()
     {
         Instantiate(projectile, transform.position, transform.rotation);
+        GetComponent<AudioSource>().Play();
     }
 }

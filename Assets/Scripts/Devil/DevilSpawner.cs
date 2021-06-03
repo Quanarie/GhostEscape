@@ -24,6 +24,7 @@ public class DevilSpawner : MonoBehaviour
 
             GameObject devilHand = Instantiate(devilHandPrefab, pos, transform.rotation, transform);
             Destroy(devilHand, attackAnimation.length);
+            GetComponent<AudioSource>().Play();
 
             timeFromPreviousAttack = 0f;
             timeBetweenAttack = Random.Range(minTimeBeetweenAttack, maxTimeBeetweenAttack);
