@@ -466,28 +466,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791961219456, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 256
+      value: 201.7788
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791961219456, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 248.86
+      value: 205.483
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791961219456, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -2.1
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791961219456, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 10.9
       objectReference: {fileID: 0}
-    - target: {fileID: 8170153791961219459, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
-      propertyPath: m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8170153791961219459, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8b82ed41b1a6b38438f0307fd2e5dc6b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
 --- !u!224 &121738680 stripped
@@ -2905,8 +2897,8 @@ MonoBehaviour:
   devilHandPrefab: {fileID: 1655111170169994511, guid: be4ca4882c7b115419c5ffdc9703c82f, type: 3}
   minX: -4.5
   maxX: 4.5
-  minTimeBeetweenAttack: 8
-  maxTimeBeetweenAttack: 15
+  minTimeBeetweenAttack: 1
+  maxTimeBeetweenAttack: 2
   attackAnimation: {fileID: 7400000, guid: d6c340cfe312b7c4cba2c455bbb6f90e, type: 2}
 --- !u!1 &1493497761
 GameObject:

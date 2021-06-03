@@ -17,7 +17,6 @@ public class GhostHealth : MonoBehaviour
     {
         if (maxHealth <= 0)
         {
-            Destroy(gameObject);
             SceneManager.LoadScene(0);
         }
     }
