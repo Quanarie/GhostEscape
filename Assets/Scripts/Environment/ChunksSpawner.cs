@@ -5,7 +5,6 @@ using UnityEngine;
 public class ChunksSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] chunks;
-    [SerializeField] private float startSpeed;
 
     private List<GameObject> spawnedChunks = new List<GameObject>();
 

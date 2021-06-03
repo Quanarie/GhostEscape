@@ -12,7 +12,7 @@ public class DevilSpawner : MonoBehaviour
     [SerializeField] private float maxTimeBeetweenAttack;
     [SerializeField] private AnimationClip attackAnimation;
 
-    private float timeBetweenAttack = 5f;
+    private float timeBetweenAttack = 20f;
     private float timeFromPreviousAttack;
 
     void Update()

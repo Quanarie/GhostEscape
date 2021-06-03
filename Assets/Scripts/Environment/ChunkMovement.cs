@@ -13,6 +13,11 @@ public class ChunkMovement : MonoBehaviour
         transform.position = pos;
     }
 
+    public float GetChunkSpeed()
+    {
+        return speed;
+    }
+
     public void AddSpeed(float speed)
     {
         if (speed > 0)

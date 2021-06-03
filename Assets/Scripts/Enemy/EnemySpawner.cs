@@ -10,9 +10,11 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float maxTimeBeetweenSpawn;
     [SerializeField] private float minX;
     [SerializeField] private float maxX;
+    [SerializeField] private float startVertSpeed;
+    [SerializeField] private float startGorSpeed;
     [SerializeField] private GameObject target;
 
-    private float timeBetweenSpawn;
+    private float timeBetweenSpawn = 10f;
     private float timeFromPreviousSpawn;
     private List<GameObject> spawnedEnemies = new List<GameObject>();
 
@@ -25,6 +27,8 @@ public class EnemySpawner : MonoBehaviour
 
             GameObject enemy = Instantiate(enemies[Random.Range(0, enemies.Length)], enemyPosition, transform.rotation, transform);
             enemy.GetComponent<EnemyMovement>().SetTarget(target);
+            enemy.GetComponent<EnemyMovement>().SetVertSpeed(startVertSpeed);
+            enemy.GetComponent<EnemyMovement>().SetGorSpeed(startGorSpeed);
             spawnedEnemies.Add(enemy);
 
             timeFromPreviousSpawn = 0f;
@@ -34,6 +38,9 @@ public class EnemySpawner : MonoBehaviour
         {
             timeFromPreviousSpawn += Time.deltaTime;
         }
+
+        startVertSpeed += Time.deltaTime / 70;
+        startGorSpeed += Time.deltaTime / 240;
 
         for (int i = 0; i < spawnedEnemies.Count; i++)
         {

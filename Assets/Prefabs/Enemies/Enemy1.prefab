@@ -139,6 +139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticalSpeed: 4
   gorizontalSpeed: 0.5
+  minGorizontalMult: 1
+  attackDistance: 2
   target: {fileID: 0}
 --- !u!114 &-7472120015601836063
 MonoBehaviour:
