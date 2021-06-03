@@ -12,4 +12,12 @@ public class ChunkMovement : MonoBehaviour
         pos.y -= speed * Time.deltaTime;
         transform.position = pos;
     }
+
+    public void AddSpeed(float speed)
+    {
+        if (speed > 0)
+        {
+            this.speed += speed;
+        }
+    }
 }

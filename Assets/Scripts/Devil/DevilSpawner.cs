@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DevilMovement : MonoBehaviour
+public class DevilSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject devilHandPrefab;
     [SerializeField] private float minX;
     [SerializeField] private float maxX;
+    [SerializeField] private float minSpawnTimeThrowEntireGame;
     [SerializeField] private float minTimeBeetweenAttack;
     [SerializeField] private float maxTimeBeetweenAttack;
     [SerializeField] private AnimationClip attackAnimation;
@@ -30,6 +31,15 @@ public class DevilMovement : MonoBehaviour
         else
         {
             timeFromPreviousAttack += Time.deltaTime;
+        }
+
+        if (minTimeBeetweenAttack > minSpawnTimeThrowEntireGame)
+        {
+            minTimeBeetweenAttack -= Time.deltaTime * 0.05f;
+        }
+        else if (maxTimeBeetweenAttack > minSpawnTimeThrowEntireGame)
+        {
+            maxTimeBeetweenAttack -= Time.deltaTime * 0.05f;
         }
     }
 }

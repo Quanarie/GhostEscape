@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] enemies;
+    [SerializeField] private float minSpawnTimeThrowEntireGame;
     [SerializeField] private float minTimeBeetweenSpawn;
     [SerializeField] private float maxTimeBeetweenSpawn;
     [SerializeField] private float minX;
@@ -44,6 +45,15 @@ public class EnemySpawner : MonoBehaviour
                     spawnedEnemies.RemoveAt(i);
                 }
             }
+        }
+
+        if (minTimeBeetweenSpawn > minSpawnTimeThrowEntireGame)
+        {
+            minTimeBeetweenSpawn -= Time.deltaTime * 0.025f;
+        }
+        else if (maxTimeBeetweenSpawn > minSpawnTimeThrowEntireGame)
+        {
+            maxTimeBeetweenSpawn -= Time.deltaTime * 0.05f;
         }
     }
 }

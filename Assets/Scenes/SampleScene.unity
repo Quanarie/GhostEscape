@@ -1875,7 +1875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d04d11207b592f04bb58916095238d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 1000
 --- !u!70 &868918716
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2897,8 +2897,9 @@ MonoBehaviour:
   devilHandPrefab: {fileID: 1655111170169994511, guid: be4ca4882c7b115419c5ffdc9703c82f, type: 3}
   minX: -4.5
   maxX: 4.5
-  minTimeBeetweenAttack: 1
-  maxTimeBeetweenAttack: 2
+  minSpawnTimeThrowEntireGame: 3
+  minTimeBeetweenAttack: 8
+  maxTimeBeetweenAttack: 12
   attackAnimation: {fileID: 7400000, guid: d6c340cfe312b7c4cba2c455bbb6f90e, type: 2}
 --- !u!1 &1493497761
 GameObject:
@@ -2945,6 +2946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 124083608241554325, guid: aced109f04112274eb3a01a99c804915, type: 3}
+  minSpawnTimeThrowEntireGame: 1.5
   minTimeBeetweenSpawn: 3
   maxTimeBeetweenSpawn: 6
   minX: -5.5
@@ -3309,6 +3311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1662933617}
   - component: {fileID: 1662933618}
+  - component: {fileID: 1662933619}
   m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
@@ -3343,6 +3346,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66f6da073c9b84f44920d609c4d105a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chunks:
+  - {fileID: 1130104246882962285, guid: 75c8922025e8c304c852b0b3ec12121c, type: 3}
+  - {fileID: 4404132938522624797, guid: 1852ea0200e7779499cc6ef53feb9d6c, type: 3}
+  - {fileID: 2115785180167636746, guid: 24f7e50801c5c754aa17cfc22f3d58fe, type: 3}
+  - {fileID: 5653023268558847975, guid: 6ab85f906bb119949ab9c1dd4179b6f7, type: 3}
+--- !u!114 &1662933619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662933616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9507097c0c16a3478ee0eb145c8611c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   chunks:
