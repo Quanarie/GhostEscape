@@ -11,6 +11,7 @@ public class GhostHealth : MonoBehaviour
     [SerializeField] private Sprite fullHeart;
     [SerializeField] private Sprite halfFullHeart;
     [SerializeField] private Sprite emptyHeart;
+    [SerializeField] private AudioClip healAudio;
 
     private float currentHealth;
 
@@ -42,6 +43,12 @@ public class GhostHealth : MonoBehaviour
     {
         if (damage > 0) currentHealth -= damage;
         DestroyIfNotAlive();
+    }
+
+    public void Heal(float toHeal)
+    {
+        if (toHeal > 0) currentHealth = Mathf.Min(currentHealth + toHeal, maxHealth);
+        GetComponent<AudioSource>().PlayOneShot(healAudio);
     }
 
     private void DestroyIfNotAlive()

@@ -42,7 +42,6 @@ public class SwipeDetector : MonoBehaviour
         {
             if (fingerUpPosition.y - fingerDownPosition.y > minDistanceForSwipe)
             {
-
                 OnSwipe?.Invoke();
             }
             else if (fingerUpPosition.y - fingerDownPosition.y >= 0)

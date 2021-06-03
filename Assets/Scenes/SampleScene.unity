@@ -2140,6 +2140,7 @@ MonoBehaviour:
   fullHeart: {fileID: 21300000, guid: 8f7781f577cbdd648b005997515c3b97, type: 3}
   halfFullHeart: {fileID: 21300000, guid: 33c8cf66a95ca8245ba6e494fc166e37, type: 3}
   emptyHeart: {fileID: 21300000, guid: f57836f71ced5fd4da5d5c2afba19eaf, type: 3}
+  healAudio: {fileID: 8300000, guid: b1656dbbd9ea6404b838dbef104f04a7, type: 3}
 --- !u!70 &868918716
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3552,9 +3553,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chunks:
   - {fileID: 1130104246882962285, guid: 75c8922025e8c304c852b0b3ec12121c, type: 3}
-  - {fileID: 4404132938522624797, guid: 1852ea0200e7779499cc6ef53feb9d6c, type: 3}
-  - {fileID: 2115785180167636746, guid: 24f7e50801c5c754aa17cfc22f3d58fe, type: 3}
-  - {fileID: 5653023268558847975, guid: 6ab85f906bb119949ab9c1dd4179b6f7, type: 3}
   startSpeed: 0
 --- !u!114 &1662933619
 MonoBehaviour:
