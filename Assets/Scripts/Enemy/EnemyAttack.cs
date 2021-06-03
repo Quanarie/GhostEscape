@@ -5,15 +5,11 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] private float damage;
-    [SerializeField] private float radius;
     [SerializeField] private GameObject target;
 
-    private void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Vector3.Distance(target.transform.position, transform.position) < radius)
-        {
-            target.GetComponent<GhostHealth>().TakeDamage(damage);
-        }
+        target.GetComponent<GhostHealth>().TakeDamage(damage);
     }
 
     public void SetTarget(GameObject target)

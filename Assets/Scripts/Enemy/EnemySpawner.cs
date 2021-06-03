@@ -23,7 +23,6 @@ public class EnemySpawner : MonoBehaviour
             enemyPosition.x = Random.Range(minX, maxX);
 
             GameObject enemy = Instantiate(enemies[Random.Range(0, enemies.Length)], enemyPosition, transform.rotation, transform);
-            enemy.GetComponent<EnemyAttack>().SetTarget(target);
             enemy.GetComponent<EnemyMovement>().SetTarget(target);
             spawnedEnemies.Add(enemy);
 
