@@ -20,4 +20,11 @@ public class ChunkMovement : MonoBehaviour
             this.speed += speed;
         }
     }
+    public void SetSpeed(float speed)
+    {
+        if (speed >= 0)
+        {
+            this.speed = speed;
+        }
+    }
 }

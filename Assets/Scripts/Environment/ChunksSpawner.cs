@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChunksSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] chunks;
+    [SerializeField] private float startSpeed;
 
     private List<GameObject> spawnedChunks = new List<GameObject>();
 
@@ -21,7 +22,9 @@ public class ChunksSpawner : MonoBehaviour
         {
             Vector3 newChunkPos = transform.position;
             newChunkPos.y += 2 * Camera.main.orthographicSize;
-            SpawnChunk(newChunkPos);
+
+            GameObject newChunk = Instantiate(chunks[Random.Range(0, chunks.Length)], newChunkPos, transform.rotation, transform);
+            spawnedChunks.Add(newChunk);
         }
 
         for (int i = 0; i < spawnedChunks.Count; i++)
@@ -32,11 +35,5 @@ public class ChunksSpawner : MonoBehaviour
                 spawnedChunks.RemoveAt(i);
             }
         }
-    }
-
-    private void SpawnChunk(Vector3 pos)
-    {
-        GameObject newChunk = Instantiate(chunks[Random.Range(0, chunks.Length)], pos, transform.rotation, transform);
-        spawnedChunks.Add(newChunk);
     }
 }

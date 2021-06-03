@@ -49,11 +49,11 @@ public class EnemySpawner : MonoBehaviour
 
         if (minTimeBeetweenSpawn > minSpawnTimeThrowEntireGame)
         {
-            minTimeBeetweenSpawn -= Time.deltaTime * 0.025f;
+            minTimeBeetweenSpawn -= Time.deltaTime / 80;
         }
         else if (maxTimeBeetweenSpawn > minSpawnTimeThrowEntireGame)
         {
-            maxTimeBeetweenSpawn -= Time.deltaTime * 0.05f;
+            maxTimeBeetweenSpawn -= Time.deltaTime / 60;
         }
     }
 }

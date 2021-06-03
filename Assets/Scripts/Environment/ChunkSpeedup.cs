@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChunkSpeedup : MonoBehaviour
 {
     [SerializeField] private GameObject[] chunks;
+    [SerializeField] private float startSpeed;
 
     private List<ChunkMovement> chunksMoveComponents = new List<ChunkMovement>();
 
@@ -13,6 +14,7 @@ public class ChunkSpeedup : MonoBehaviour
         foreach (GameObject chunk in chunks)
         {
             chunksMoveComponents.Add(chunk.GetComponent<ChunkMovement>());
+            chunk.GetComponent<ChunkMovement>().SetSpeed(startSpeed);
         }
     }
 
@@ -20,7 +22,7 @@ public class ChunkSpeedup : MonoBehaviour
     {
         foreach (ChunkMovement chunk in chunksMoveComponents)
         {
-            chunk.AddSpeed(Time.deltaTime / 60);
+            chunk.AddSpeed(Time.deltaTime / 80);
         }
     }
 }
