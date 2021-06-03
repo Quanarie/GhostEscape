@@ -6,7 +6,12 @@ public class GhostTeleport : MonoBehaviour
 {
     [SerializeField] private float teleportDistance;
 
-    public void OnTeleportButtonDown()
+    private void Start()
+    {
+        GetComponent<SwipeDetector>().OnSwipe += OnTeleport;
+    }
+
+    public void OnTeleport()
     {
         Vector3 pos = transform.position;
         pos.y += teleportDistance;

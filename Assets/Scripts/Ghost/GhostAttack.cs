@@ -6,7 +6,12 @@ public class GhostAttack : MonoBehaviour
 {
     [SerializeField] private GameObject projectile;
 
-    public void OnAttackButtonDown()
+    private void Start()
+    {
+        GetComponent<SwipeDetector>().OnClick += OnAttack;
+    }
+
+    public void OnAttack()
     {
         Instantiate(projectile, transform.position, transform.rotation);
     }
